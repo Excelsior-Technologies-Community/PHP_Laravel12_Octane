@@ -54,20 +54,20 @@ PHP_Laravel12_Octane/
 ##  Installation Guide
 
 This guide explains how to set up a high-performance Laravel 12 development environment using:
-• WSL (Ubuntu)
-• Laravel Octane
-• FrankenPHP
-• MySQL (inside WSL)
-• OPcache
+*  WSL (Ubuntu)
+* Laravel Octane
+*  FrankenPHP
+*  MySQL (inside WSL)
+*  OPcache
 
 ---
 
 ## Requirements
 
-• Windows 10/11
-• WSL enabled
-• Ubuntu installed via WSL
-• Internet connection
+*  Windows 10/11
+*  WSL enabled
+*  Ubuntu installed via WSL
+*  Internet connection
 
 ---
 
