@@ -1,10 +1,13 @@
 #  PHP_Laravel12_Octane
 
-![Laravel](https://img.shields.io/badge/Laravel-12-red)
-![Octane](https://img.shields.io/badge/Octane-Enabled-orange)
-![FrankenPHP](https://img.shields.io/badge/Server-FrankenPHP-blue)
-![WSL](https://img.shields.io/badge/Environment-WSL-green)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12-red" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/Octane-Enabled-orange" alt="Octane">
+  <img src="https://img.shields.io/badge/Server-FrankenPHP-blue" alt="FrankenPHP">
+  <img src="https://img.shields.io/badge/Database-MySQL-blueviolet" alt="MySQL">
+  <img src="https://img.shields.io/badge/Environment-WSL-green" alt="WSL">
+</p>
+
 
 ---
 
