@@ -278,10 +278,10 @@ Restart Octane after saving.
 
 ##  Important Notes
 
-• Always run Laravel from WSL path, not C:\xampp
-• Do not store request data in static variables (Octane memory stays alive)
-• Use queues for heavy tasks
-• File sessions are best for local Octane development
+*  Always run Laravel from WSL path, not C:\xampp
+*  Do not store request data in static variables (Octane memory stays alive)
+*  Use queues for heavy tasks
+*  File sessions are best for local Octane development
 
 ---
 
