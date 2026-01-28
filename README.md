@@ -1,66 +1,284 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+#  PHP_Laravel12_Octane
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-12-red)
+![Octane](https://img.shields.io/badge/Octane-Enabled-orange)
+![FrankenPHP](https://img.shields.io/badge/Server-FrankenPHP-blue)
+![WSL](https://img.shields.io/badge/Environment-WSL-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##  Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project demonstrates how to set up a **high-performance Laravel 12 development environment** using modern tools designed for speed and scalability. Instead of the traditional PHP request lifecycle, this setup uses **Laravel Octane with FrankenPHP**, which keeps the application in memory for blazing-fast performance.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The environment runs entirely inside **WSL (Ubuntu)** on Windows, giving you a Linux-based development stack that closely mirrors production behavior.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##  Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+*  Laravel Octane for high-performance request handling
+*  FrankenPHP application server
+*  MySQL running inside WSL
+*  OPcache enabled for faster PHP execution
+*  Linux-based development using WSL (Ubuntu)
+*  Production-like local development setup
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+##  Folder Structure
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```
+PHP_Laravel12_Octane/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── .env.example
+├── artisan
+├── composer.json
+└── README.md
+```
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+##  Installation Guide
 
-## Contributing
+This guide explains how to set up a high-performance Laravel 12 development environment using:
+• WSL (Ubuntu)
+• Laravel Octane
+• FrankenPHP
+• MySQL (inside WSL)
+• OPcache
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## Requirements
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+• Windows 10/11
+• WSL enabled
+• Ubuntu installed via WSL
+• Internet connection
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## STEP 1 — Install WSL & Ubuntu
 
-## License
+Open PowerShell as Administrator:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+wsl --install
+```
+
+Restart your PC if asked.
+After restart, Ubuntu will open and ask:
+• Create a Linux username
+• Set a password
+
+---
+
+## STEP 2 — Update Ubuntu
+
+Inside WSL terminal:
+
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+## STEP 3 — Install PHP & Required Extensions
+
+```
+sudo apt install php php-cli php-mysql php-curl php-xml php-mbstring unzip git curl -y
+```
+
+Check PHP:
+
+```
+php -v
+```
+
+---
+
+## STEP 4 — Install Composer
+
+```
+curl -sS https://getcomposer.org/installer | php
+
+sudo mv composer.phar /usr/local/bin/composer
+
+composer -V
+```
+
+---
+
+## STEP 5 — Install MySQL (Inside WSL)
+
+```
+sudo apt install mysql-server -y
+
+sudo service mysql start
+```
+
+Set root password:
+
+```
+sudo mysql
+```
+
+Inside MySQL:
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+Test login:
+
+```
+mysql -u root -p
+```
+
+---
+
+## STEP 6 — Create Database
+
+```
+mysql -u root -p
+
+CREATE DATABASE laravel;
+EXIT;
+```
+
+---
+
+## STEP 7 — Create Laravel Project
+
+Inside WSL home directory:
+
+```
+composer create-project laravel/laravel laravel-octane
+cd laravel-octane
+```
+
+---
+
+## STEP 8 — Configure .env
+
+Edit environment file:
+
+```
+nano .env
+```
+
+Update database settings:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+Use file sessions for Octane:
+
+```
+SESSION_DRIVER=file
+CACHE_STORE=file
+QUEUE_CONNECTION=sync
+```
+
+---
+
+## STEP 9 — Install Laravel Octane
+
+```
+composer require laravel/octane
+
+php artisan octane:install
+```
+
+When asked, choose:
+
+```
+frankenphp
+```
+
+---
+
+## STEP 10 — Fix Permissions
+
+```
+chmod -R 775 storage bootstrap/cache
+```
+
+---
+
+## STEP 11 — Start Octane Server
+
+```
+php artisan octane:start --server=frankenphp --watch
+```
+
+Open browser:
+
+```
+http://localhost:8000
+```
+<img width="1290" height="725" alt="Screenshot 2026-01-28 133327" src="https://github.com/user-attachments/assets/29f3b251-3208-4d3d-849c-e907a1cbb9c6" />
+
+
+You should see the Laravel welcome page.
+
+---
+
+## STEP 12 — Enable OPcache for CLI (Performance Boost)
+
+```
+sudo nano /etc/php/8.3/cli/php.ini
+```
+
+Set:
+
+```
+opcache.enable=1
+opcache.enable_cli=1
+opcache.memory_consumption=256
+opcache.max_accelerated_files=20000
+opcache.validate_timestamps=1
+```
+
+Restart Octane after saving.
+
+---
+
+##  Useful Commands
+
+| Action            | Command                                                |
+| ----------------- | ------------------------------------------------------ |
+| Start server      | `php artisan octane:start --server=frankenphp --watch` |
+| Stop server       | `php artisan octane:stop`                              |
+| Reload server     | `php artisan octane:reload`                            |
+| Kill stuck server | `pkill -f frankenphp`                                  |
+
+---
+
+##  Important Notes
+
+• Always run Laravel from WSL path, not C:\xampp
+• Do not store request data in static variables (Octane memory stays alive)
+• Use queues for heavy tasks
+• File sessions are best for local Octane development
+
+---
+
