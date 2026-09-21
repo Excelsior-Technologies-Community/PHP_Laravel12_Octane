@@ -82,20 +82,30 @@
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark mb-4">
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 shadow-sm">
         <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('octane.monitor') }}">
+                <span>⚡</span>
+                <span>Laravel Octane Monitor</span>
+            </a>
 
-            <span class="navbar-brand">
-                ⚡ Laravel Octane Monitor
-            </span>
-
-            <span class="text-white">
-                FrankenPHP
-            </span>
-
+            <div class="d-flex align-items-center gap-2">
+                <ul class="navbar-nav flex-row gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 active fw-bold text-white rounded bg-primary" href="{{ route('octane.monitor') }}">📊 Monitor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-secondary hover-text-white" href="{{ route('octane.concurrent') }}">⚡ Concurrency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-secondary hover-text-white" href="{{ route('octane.cache') }}">🏎️ In-Memory Cache</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-secondary hover-text-white" href="{{ route('octane.benchmark') }}">📈 Stress Benchmark</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
     </nav>
 
 
